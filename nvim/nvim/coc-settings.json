@@ -1,0 +1,52 @@
+{
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    },
+    "intelephense": {
+      "command": "intelephense",
+      "args": ["--stdio"],
+      "filetypes": ["php"],
+      "initializationOptions": {
+        "storagePath": "/tmp/intelephense"
+      }
+    }
+  },
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue"
+  ],
+
+  "rust-analyzer.diagnostics.enable": true,
+
+  "diagnostic.virtualText": true,
+  "diagnostic.enableSign": true,
+  "diagnostic.warningSign": "W",
+  "diagnostic.errorSign": "E",
+  "diagnostic.infoSign": "I",
+  "diagnostic.hintSign": "H",
+  "diagnostic.messageTarget": "echo",
+  "diagnostic.refreshOnInsertMode": false,
+  "hover.target": "preview"
+}

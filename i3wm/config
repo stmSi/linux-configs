@@ -299,6 +299,10 @@ exec --no-startup-id start_conky_maia
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
+# This command sets the key repeat delay to 180 milliseconds and 
+# the key repeat rate to 30 characters per second.
+exec_always --no-startup-id xset r rate 180 30
+
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
 # https://i3wm.org/docs/userguide.html#xresources

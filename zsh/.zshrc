@@ -48,6 +48,7 @@ alias cr="cargo run"
 alias cb="cargo build"
 alias file-manager=joshuto
 alias tree="tree -I 'node_modules|vendor'"
+alias todo-list="nvim ~/todo.md"
 # alias zoom="/home/stm/Downloads/zoom/zoom/ZoomLauncher"
 #
 #
@@ -74,7 +75,7 @@ autoload -Uz add-zsh-hook
 
 add-zsh-hook preexec update_tmux_window_name
 
-project_cd() {
+pcd() {
   REGISTERED_PATHS_FILE=~/.registered_paths
 
   # Choose a path using fzf and change the current directory
@@ -97,3 +98,11 @@ project_vim() {
   fi
 }
 source /usr/share/nvm/init-nvm.sh
+alias ilp-settlement-ethereum="RUST_LOG=interledger_settlement,ilp_settlement_ethereum=debug cargo run --bin ilp-settlement-ethereum --"
+alias ilp-node="cargo run --bin ilp-node --"
+alias ilp-cli="cargo run --bin ilp-cli --"
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
